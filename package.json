@@ -1,7 +1,7 @@
 {
   "name": "design-course-backend",
   "version": "1.0.0",
-  "description": "",
+  "description": "Backend for graphic design course platform",
   "main": "server.js",
   "scripts": {
     "start": "node server.js",
@@ -9,7 +9,7 @@
     "build": "prisma generate",
     "postinstall": "prisma generate"
   },
-  "keywords": [],
+  "keywords": ["design", "course", "education"],
   "author": "",
   "license": "ISC",
   "dependencies": {
