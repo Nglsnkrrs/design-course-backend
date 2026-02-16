@@ -1,33 +1,33 @@
 // scripts/init-db.js
 const { PrismaClient } = require('@prisma/client');
-const fs = require('fs');
-const path = require('path');
-
 const prisma = new PrismaClient();
 
 async function initDatabase() {
   try {
     console.log('Initializing database...');
     
-    const isProduction = process.env.NODE_ENV === 'production';
-    const dbDir = isProduction ? '/tmp' : path.join(__dirname, '..', 'db');
-    
-    console.log('Database directory:', dbDir);
-    
-    // В продакшене /tmp всегда доступна
-    if (!isProduction) {
-      if (!fs.existsSync(dbDir)) {
-        fs.mkdirSync(dbDir, { recursive: true });
-        console.log('Created db directory');
-      }
-    }
-
-    // Проверяем подключение к базе
+    // Проверяем подключение
     await prisma.$connect();
     console.log('Database connected successfully');
 
+    // Проверяем, есть ли пользователи
     const userCount = await prisma.user.count();
     console.log(`Users in database: ${userCount}`);
+
+    // Если нет пользователей, можно создать тестового
+    if (userCount === 0) {
+      const bcrypt = require('bcrypt');
+      const hashedPassword = await bcrypt.hash('admin123', 10);
+      
+      await prisma.user.create({
+        data: {
+          name: 'Admin',
+          email: 'admin@example.com',
+          password: hashedPassword
+        }
+      });
+      console.log('Admin user created');
+    }
 
   } catch (error) {
     console.error('Database initialization error:', error);
