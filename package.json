@@ -10,7 +10,7 @@
     "migrate": "prisma migrate deploy",
     "postinstall": "prisma generate",
     "init-db": "node scripts/init-db.js",
-    "render-start": "npm run build && npm run init-db && npm start"
+    "render-start": "npm run build && npx prisma migrate dev --name init && npm run init-db && npm start"
   },
   "keywords": ["design", "course", "education"],
   "author": "",
