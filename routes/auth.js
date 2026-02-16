@@ -8,9 +8,9 @@ const prisma = new PrismaClient();
 const fs = require('fs');
 const path = require('path');
 
-const JWT_SECRET = process.env.JWT_SECRET || 'devsecret';
+const JWT_SECRET = process.env.JWT_SECRET;
 
-// Загружаем модули из JSON файла с обработкой ошибок
+// Загружаем модули из JSON файла
 const modulesPath = path.join(__dirname, '../data/modules.json');
 let modulesData = { modules: [] };
 
@@ -18,22 +18,20 @@ try {
   if (fs.existsSync(modulesPath)) {
     const data = fs.readFileSync(modulesPath, 'utf8');
     modulesData = JSON.parse(data);
-    console.log('Modules loaded successfully in auth:', modulesData.modules.length);
-  } else {
-    console.error('Modules file not found at:', modulesPath);
+    console.log('Modules loaded in auth:', modulesData.modules.length);
   }
 } catch (error) {
-  console.error('Error loading modules.json in auth:', error);
+  console.error('Error loading modules.json:', error);
 }
 
 // Регистрация
 router.post('/register', async (req, res) => {
   const { name, email, password } = req.body;
-
+  
   console.log('Registration attempt:', { name, email });
 
   try {
-    // Проверяем, существует ли пользователь
+    // Проверяем существование пользователя
     const userExists = await prisma.user.findUnique({
       where: { email }
     });
@@ -59,15 +57,20 @@ router.post('/register', async (req, res) => {
     if (modulesData.modules && modulesData.modules.length > 0) {
       const firstModule = modulesData.modules[0];
       if (firstModule && firstModule.lessons && firstModule.lessons[0]) {
-        await prisma.lessonProgress.create({
-          data: {
-            userId: user.id,
-            lessonId: firstModule.lessons[0].id,
-            completed: false,
-            unlocked: true
-          }
-        });
-        console.log('Initial progress created for user:', user.id);
+        try {
+          await prisma.lessonProgress.create({
+            data: {
+              userId: user.id,
+              lessonId: firstModule.lessons[0].id,
+              completed: false,
+              unlocked: true
+            }
+          });
+          console.log('Initial progress created for user:', user.id);
+        } catch (progressError) {
+          console.error('Error creating progress:', progressError);
+          // Продолжаем даже если прогресс не создался
+        }
       }
     }
 
@@ -90,7 +93,7 @@ router.post('/register', async (req, res) => {
 // Логин
 router.post('/login', async (req, res) => {
   const { email, password } = req.body;
-
+  
   console.log('Login attempt:', { email });
 
   try {
