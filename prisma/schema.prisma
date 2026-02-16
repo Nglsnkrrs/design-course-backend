@@ -1,0 +1,34 @@
+// prisma/schema.prisma
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")  // Изменено с ./dev.db на ../db/database.db
+}
+
+model User {
+  id               Int              @id @default(autoincrement())
+  name             String
+  email            String           @unique
+  password         String
+  createdAt        DateTime         @default(now())
+  updatedAt        DateTime         @updatedAt
+  lessonProgress   LessonProgress[]
+}
+
+model LessonProgress {
+  id         Int      @id @default(autoincrement())
+  userId     Int
+  user       User     @relation(fields: [userId], references: [id])
+  lessonId   Int
+  completed  Boolean  @default(false)
+  unlocked   Boolean  @default(false)
+  createdAt  DateTime @default(now())
+  updatedAt  DateTime @updatedAt
+
+  @@unique([userId, lessonId])
+  @@index([userId])
+  @@index([lessonId])
+}

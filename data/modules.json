@@ -1,0 +1,582 @@
+{
+  "modules": [
+    {
+      "id": 1,
+      "title": "Основы дизайна",
+      "description": "Разбираются основные темы дизайна, баланс, цвет и тд",
+      "duration": "4 часа",
+      "students": 1823,
+      "rating": 4.9,
+      "difficulty": "Начальный",
+      "isNew": true,
+      "unlocked": true,
+      "progress": 0,
+      "lessons": [
+        {
+          "id": 1,
+          "title": "КОМПОЗИЦИЯ В ГРАФИЧЕСКОМ ДИЗАЙНЕ. БАЗОВЫЕ ПРАВИЛА И ПРИМЕРЫ",
+          "content": "Темы, которые покрывает: Что такое композиция. Баланс. Контраст. Визуальная иерархия. Акценты. Простота",
+          "duration": "7 мин",
+          "video": "https://www.youtube.com/embed/8sNgtl3KvTI",
+          "unlocked": true,
+          "completed": false,
+          "materials": [
+            {
+              "name": "Презентация: Композиция в дизайне",
+              "file": "lesson1_presentation.pdf",
+              "size": "2.4 MB",
+              "type": "pdf",
+              "color": "red"
+            },
+            {
+              "name": "Конспект урока и домашнее задание",
+              "file": "lesson1_notes.docx",
+              "size": "1.1 MB",
+              "type": "docx",
+              "color": "blue"
+            }
+          ]
+        },
+        {
+          "id": 2,
+          "title": "10 главных принципов композиции, которые изменят твой дизайн!",
+          "content": "Подробный обзор 10 принципов композиции и визуальных схем.",
+          "duration": "30 мин",
+          "video": "https://rutube.ru/play/embed/15cb67fad498e8effcb3b392b9a72d8f",
+          "unlocked": false,
+          "completed": false,
+          "materials": [
+            {
+              "name": "Презентация: 10 принципов композиции",
+              "file": "lesson2_presentation.pdf",
+              "size": "2.8 MB",
+              "type": "pdf",
+              "color": "red"
+            }
+          ]
+        },
+        {
+          "id": 3,
+          "title": "модульные сетки (Grid Systems)",
+          "content": "для базового понимания, почему сетки важны и как они влияют на структуру дизайна.",
+          "duration": "30 мин",
+          "video": "https://www.youtube.com/embed/uE0edEeU-Rg",
+          "unlocked": false,
+          "completed": false,
+          "materials": [
+            {
+              "name": "Презентация: Модульные сетки",
+              "file": "lesson3_presentation.pdf",
+              "size": "2.8 MB",
+              "type": "pdf",
+              "color": "red"
+            },
+            {
+              "name": "Домашнее задание: Постройте сетку",
+              "file": "lesson3_homework.docx",
+              "size": "1.3 MB",
+              "type": "docx",
+              "color": "blue"
+            }
+          ]
+        },
+        {
+          "id": 4,
+          "title": "Модульные сетки в UI‑дизайне",
+          "content": "Отличный подробный урок по сеткам именно в графическом/UX‑дизайне — с примерами построения и объяснением логики сеток.",
+          "duration": "30 мин",
+          "video": "https://www.youtube.com/embed/nlz7jPTLkbo",
+          "unlocked": false,
+          "completed": false,
+          "materials": []
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "title": "Цвет",
+      "description": "Понимание теории цвета, обучение работы с цветом",
+      "duration": "10 часов",
+      "students": 2345,
+      "rating": 4.7,
+      "difficulty": "Начальный",
+      "isNew": true,
+      "unlocked": false,
+      "progress": 0,
+      "lessons": [
+        {
+          "id": 5,
+          "title": "Теория цвета за 20 минут",
+          "content": "Цветовой круг, основные схемы, контраст и практическое применение в одном материале.",
+          "duration": "97 мин",
+          "video": "https://www.youtube.com/embed/WreFxJ7rjQ4",
+          "unlocked": true,
+          "completed": false,
+          "materials": [
+            {
+              "name": "Презентация: Теория цвета",
+              "file": "lesson5_color_theory.pdf",
+              "size": "3.2 MB",
+              "type": "pdf",
+              "color": "red"
+            }
+          ]
+        },
+        {
+          "id": 6,
+          "title": "Как подобрать цвета? Создаём палитру для дизайна",
+          "content": "«Цветовые палитры» и «3 цвета — правило».",
+          "duration": "4 мин",
+          "video": "https://www.youtube.com/embed/WxQPizG0-Ws",
+          "unlocked": false,
+          "completed": false,
+          "materials": []
+        },
+        {
+          "id": 7,
+          "title": "Психология цвета в UX/UI‑дизайне",
+          "content": "Отличное детализированное видео для уроков «Психология цвета», «Цвет в брендинге» и «Ошибки цвета».",
+          "duration": "5 мин",
+          "video": "https://www.youtube.com/embed/0mBOi_KrB_E",
+          "unlocked": false,
+          "completed": false,
+          "materials": [
+            {
+              "name": "Психология цвета (шпаргалка)",
+              "file": "lesson7_color_psychology.pdf",
+              "size": "3.5 MB",
+              "type": "pdf",
+              "color": "green"
+            }
+          ]
+        },
+        {
+          "id": 8,
+          "title": "Психология цвета в дизайне: Как выбрать цветовую палитру",
+          "content": "дополнение к предыдущему видео для углубления темы.",
+          "duration": "24 мин",
+          "video": "https://www.youtube.com/embed/N2-JNFvBKGg",
+          "unlocked": false,
+          "completed": false,
+          "materials": []
+        },
+        {
+          "id": 9,
+          "title": "Теория цвета и цветовой круг (Canva)",
+          "content": "Цветовой круг + Практика: подбор палитры",
+          "duration": "12 мин",
+          "video": "https://www.youtube.com/embed/-T53aODtrmA",
+          "unlocked": false,
+          "completed": false,
+          "materials": []
+        },
+        {
+          "id": 10,
+          "title": "Основы теории цвета. Как подобрать палитру",
+          "content": "Используется как дополнительное видео для закрепления темы.",
+          "duration": "18 мин",
+          "video": "https://www.youtube.com/embed/e_zMpJxCaCU",
+          "unlocked": false,
+          "completed": false,
+          "materials": []
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "title": "Типографика",
+      "description": "Изучаем шрифты, работу со шрифтами",
+      "duration": "7 часов",
+      "students": 1987,
+      "rating": 4.8,
+      "difficulty": "Начальный",
+      "isNew": true,
+      "unlocked": false,
+      "progress": 0,
+      "lessons": [
+        {
+          "id": 11,
+          "title": "Типографика в дизайне",
+          "content": "базовое видео по типографике с разбором основных принципов и демонстрацией на примерах",
+          "duration": "20 мин",
+          "video": "https://www.youtube.com/embed/Di3nqzpIwgw",
+          "unlocked": true,
+          "completed": false,
+          "materials": [
+            {
+              "name": "Презентация: Основы типографики",
+              "file": "lesson11_typography_basics.pdf",
+              "size": "3.4 MB",
+              "type": "pdf",
+              "color": "red"
+            }
+          ]
+        },
+        {
+          "id": 12,
+          "title": "Типографика — работа с текстом и шрифтами в дизайне",
+          "content": "В видео детально показано, как настраивать шрифт в макете, почему важны интервалы и размеры, и как создавать читаемый текст.",
+          "duration": "3 мин",
+          "video": "https://www.youtube.com/embed/0uVwQfmW1nU",
+          "unlocked": false,
+          "completed": false,
+          "materials": []
+        },
+        {
+          "id": 13,
+          "title": "Типографика и иерархия текста",
+          "content": "Полезно для закрепления практических навыков работы с иерархией, сочетанием и пространством текста.",
+          "duration": "17 мин",
+          "video": "https://www.youtube.com/embed/qR-fZjyi3nk",
+          "unlocked": false,
+          "completed": false,
+          "materials": [
+            {
+              "name": "Иерархия текста (примеры)",
+              "file": "lesson13_text_hierarchy.pdf",
+              "size": "3.6 MB",
+              "type": "pdf",
+              "color": "green"
+            }
+          ]
+        },
+        {
+          "id": 14,
+          "title": "Уроки по сочетанию шрифтов",
+          "content": "Сочетание шрифтов, основы классификации и подбора гармоничных комбинаций.",
+          "duration": "5 мин",
+          "video": "https://www.youtube.com/embed/3NRME21YCTg",
+          "unlocked": false,
+          "completed": false,
+          "materials": []
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "title": "Adobe Photoshop",
+      "description": "Освоение Photoshop с нуля: интерфейс, слои, ретушь, работа с фото и создание рекламных баннеров.",
+      "duration": "8 часов",
+      "students": 1765,
+      "rating": 4.9,
+      "difficulty": "Начальный",
+      "isNew": true,
+      "unlocked": false,
+      "progress": 0,
+      "lessons": [
+        {
+          "id": 15,
+          "title": "Интерфейс Photoshop (Вводный урок)",
+          "content": "вводное видео, покрывает весь интерфейс и что с чем связано — подходит для первого урока.",
+          "duration": "47 мин",
+          "video": "https://www.youtube.com/embed/QUus8qF3Rrc",
+          "unlocked": true,
+          "completed": false,
+          "materials": []
+        },
+        {
+          "id": 16,
+          "title": "Слои — основы и практика",
+          "content": "Одна из важнейших тем фотошопа — слои. В этом видео рассмотрим какие бывают слои, и как с ними работать.",
+          "duration": "8 мин",
+          "video": "https://www.youtube.com/embed/OW2EXz_Hw5w",
+          "unlocked": false,
+          "completed": false,
+          "materials": []
+        },
+        {
+          "id": 17,
+          "title": "Маски в Photoshop (подробный урок)",
+          "content": "видеоурок с практическими примерами масок.",
+          "duration": "7 мин",
+          "video": "https://www.youtube.com/embed/jb3bsHHdHgk",
+          "unlocked": false,
+          "completed": false,
+          "materials": []
+        },
+        {
+          "id": 18,
+          "title": "Выделение объектов в Photoshop",
+          "content": "В этом видео я рассказываю про быстрое выделение объектов в PhotoShop 2020.",
+          "duration": "19 мин",
+          "video": "https://www.youtube.com/embed/4zy8UuH-AJ0",
+          "unlocked": false,
+          "completed": false,
+          "materials": []
+        },
+        {
+          "id": 19,
+          "title": "Ретушь фото — подробный урок",
+          "content": "В видео показан процесс ретуши плохой кожи в Adobe Photoshop",
+          "duration": "19 мин",
+          "video": "https://www.youtube.com/embed/4kjOKoN3xSU",
+          "unlocked": false,
+          "completed": false,
+          "materials": []
+        },
+        {
+          "id": 20,
+          "title": "Цветокоррекция в Photoshop",
+          "content": "В этом ролике вы научитесь делать правильную цветокоррекцию в Фотошопе",
+          "duration": "19 мин",
+          "video": "https://www.youtube.com/embed/lURtaxElK8Y",
+          "unlocked": false,
+          "completed": false,
+          "materials": []
+        },
+        {
+          "id": 21,
+          "title": "Баннеры для соц сети",
+          "content": "В этом видео я показала как сделать дизайн крутого баннера в фотошопе с нуля",
+          "duration": "19 мин",
+          "video": "https://www.youtube.com/embed/8VQi7dYFZEs",
+          "unlocked": false,
+          "completed": false,
+          "materials": []
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "title": "Adobe Illustrator",
+      "description": "Освоение Photoshop с нуля: интерфейс, слои, ретушь, работа с фото и создание рекламных баннеров.",
+      "duration": "12 часов",
+      "students": 2541,
+      "rating": 4.9,
+      "difficulty": "Начальный",
+      "isNew": false,
+      "unlocked": false,
+      "progress": 0,
+      "lessons": [
+        {
+          "id": 24,
+          "title": "Интерфейс & Основы Illustrator",
+          "content": "Обзор интерфейса: рабочее пространство, панели, инструменты, навигация — идеальное начало для новичков.",
+          "duration": "60 мин",
+          "video": "https://www.youtube.com/embed/Di8pLLn0Hmc",
+          "unlocked": true,
+          "completed": false,
+          "materials": []
+        },
+        {
+          "id": 25,
+          "title": "Векторная графика & Фигуры",
+          "content": "Всё про инструменты создания форм и базовую работу с вектором.",
+          "duration": "20 мин",
+          "video": "https://www.youtube.com/embed/5uYXHRvPobI",
+          "unlocked": false,
+          "completed": false,
+          "materials": []
+        },
+        {
+          "id": 26,
+          "title": "Pen tool (Перо)",
+          "content": "речь пойдет о полезном инструменте Pen Tool (Перо), при помощи него можно рисовать объекты и вносить правки в готовые.",
+          "duration": "3 мин",
+          "video": "https://www.youtube.com/embed/IKi1AEsOx8E",
+          "unlocked": false,
+          "completed": false,
+          "materials": []
+        },
+        {
+          "id": 27,
+          "title": "Создание логотипов",
+          "content": "Пошаговый разбор создания логотипа",
+          "duration": "21 мин",
+          "video": "https://www.youtube.com/embed/L5KCVjw2IpY",
+          "unlocked": false,
+          "completed": false,
+          "materials": []
+        },
+        {
+          "id": 28,
+          "title": "Иконки — практика",
+          "content": "Видео про создание векторных фигур для иконок и простых логотипов.",
+          "duration": "25 мин",
+          "video": "https://www.youtube.com/embed/lGcl-1e3OrE",
+          "unlocked": false,
+          "completed": false,
+          "materials": []
+        },
+        {
+          "id": 29,
+          "title": "Паттерны (узоры)",
+          "content": "Подробный разбор создания бесшовного повторяющегося паттерна на практике.",
+          "duration": "24 мин",
+          "video": "https://www.youtube.com/embed/tGjDetS7IJ0",
+          "unlocked": false,
+          "completed": false,
+          "materials": []
+        },
+        {
+          "id": 30,
+          "title": "Дополнительные видео/плейлисты",
+          "content": "Плейлист по Illustrator",
+          "duration": "22 мин",
+          "video": "https://www.youtube.com/embed/videoseries?list=PLc_dmoymL92MmpQ22xXfGJTCko7tOkQbG",
+          "unlocked": false,
+          "completed": false,
+          "materials": []
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "title": "Figma",
+      "description": "Основы векторной графики: интерфейс, инструменты, логотипы, иконки и практические задания.",
+      "duration": "10 часов",
+      "students": 1984,
+      "rating": 4.8,
+      "difficulty": "Начальный",
+      "isNew": true,
+      "unlocked": false,
+      "progress": 0,
+      "lessons": [
+        {
+          "id": 31,
+          "title": "Интерфейс Figma — базовый вводный урок",
+          "content": "Отличное видео для старта работы с Figma и понимания, где что находится.",
+          "duration": "12 мин",
+          "video": "https://www.youtube.com/embed/eE2GsJlOmI0",
+          "unlocked": true,
+          "completed": false,
+          "materials": [
+            {
+              "name": "Список горячих клавиш",
+              "file": "lesson31_hotkeys.pdf",
+              "size": "2.0 MB",
+              "type": "pdf",
+              "color": "green"
+            }
+          ]
+        },
+        {
+          "id": 32,
+          "title": "Фреймы и компоненты (основы структуры макета)",
+          "content": "Фреймы, группы или секции — чем лучше пользоваться в Figma?",
+          "duration": "20 мин",
+          "video": "https://www.youtube.com/embed/kGqWcQXbAsg",
+          "unlocked": false,
+          "completed": false,
+          "materials": [
+            {
+              "name": "Практика, домашнее задание",
+              "file": "lesson53_homework.docx",
+              "size": "3.5 MB",
+              "type": "docx",
+              "color": "blue"
+            }
+          ]
+        },
+        {
+          "id": 33,
+          "title": "Сетки, направляющие и layout‑grid",
+          "content": "Идеально подходит для урока Сетки",
+          "duration": "22 мин",
+          "video": "https://www.youtube.com/embed/geRow4PNNdA",
+          "unlocked": false,
+          "completed": false,
+          "materials": []
+        },
+        {
+          "id": 34,
+          "title": "UI-КИТ: ЗАЧЕМ И ЧТО ДОЛЖНО БЫТЬ ВНУТРИ?",
+          "content": "кит в фигма",
+          "duration": "25 мин",
+          "video": "https://www.youtube.com/embed/AOIsdjCaMAQ",
+          "unlocked": false,
+          "completed": false,
+          "materials": [
+            {
+              "name": "Готовые UI-киты",
+              "file": "lesson34_UIKIT.rar",
+              "size": "4.0 MB",
+              "type": "rar",
+              "color": "purple"
+            }
+          ]
+        },
+        {
+          "id": 35,
+          "title": "Как сделать дизайн сайта в Figma",
+          "content": "Практика создания сайта",
+          "duration": "18 мин",
+          "video": "https://www.youtube.com/embed/efC861nhEQw",
+          "unlocked": false,
+          "completed": false,
+          "materials": [
+            {
+              "name": "Материалы для Урока",
+              "file": "lesson35_materials.zip",
+              "size": "3.6 MB",
+              "type": "zip",
+              "color": "purple"
+            }
+          ]
+        },
+        {
+          "id": 36,
+          "title": "Ещё одна практика дизайна сайта",
+          "content": "Создание повторяющихся паттернов, использование текстур в дизайне.",
+          "duration": "20 мин",
+          "video": "https://www.youtube.com/embed/4-NUlgWbncs",
+          "unlocked": false,
+          "completed": false,
+          "materials": [
+            {
+              "name": "Материалы",
+              "file": "lesson36_source_file.fig",
+              "size": "3.9 MB",
+              "type": "fig",
+              "color": "purple"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "title": "Портфолио",
+      "description": "Изучение Figma: интерфейс, создание экранов, кнопок, карточек, лендингов и UI-элементов.",
+      "duration": "8 часов",
+      "students": 1750,
+      "rating": 4.9,
+      "difficulty": "Начальный",
+      "isNew": true,
+      "unlocked": false,
+      "progress": 0,
+      "lessons": [
+        {
+          "id": 37,
+          "title": "Как дизайнеру создать портфолио?",
+          "content": "Как создать портфолио",
+          "duration": "15 мин",
+          "video": "https://www.youtube.com/embed/qj-UP0p9uLY",
+          "unlocked": true,
+          "completed": false,
+          "materials": []
+        },
+        {
+          "id": 38,
+          "title": "Как оформлять портфолио и презентации работ",
+          "content": "Правила оформления портфолио",
+          "duration": "18 мин",
+          "video": "https://www.youtube.com/embed/MLhwtzdXaYg",
+          "unlocked": false,
+          "completed": false,
+          "materials": []
+        },
+        {
+          "id": 39,
+          "title": "Где размещать портфолио? Лучшие практики по презентации дизайнерского портфолио.",
+          "content": "Размещение портфолио",
+          "duration": "20 мин",
+          "video": "https://www.youtube.com/embed/ZROT_0mAsBo",
+          "unlocked": false,
+          "completed": false,
+          "materials": []
+        }
+      ]
+    }
+  ]
+}
