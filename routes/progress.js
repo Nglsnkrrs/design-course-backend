@@ -236,5 +236,29 @@ router.post('/progress/init', auth, async (req, res) => {
     res.status(500).json({ error: error.message });
   }
 });
+// Эндпоинт для проверки существования файлов материалов
+router.get('/check-file/:filename', (req, res) => {
+  const filename = req.params.filename;
+  // Путь к папке с материалами (относительно корня проекта)
+  const filePath = path.join(__dirname, '../public/materials', filename);
+  
+  console.log('Checking file:', filePath);
+
+  // Проверяем, существует ли файл
+  if (fs.existsSync(filePath)) {
+    const stats = fs.statSync(filePath);
+    res.json({
+      exists: true,
+      size: stats.size,
+      sizeFormatted: (stats.size / 1024).toFixed(2) + ' KB',
+      filename: filename
+    });
+  } else {
+    res.json({ 
+      exists: false,
+      filename: filename
+    });
+  }
+});
 
 module.exports = router;
