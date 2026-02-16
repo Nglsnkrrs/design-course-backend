@@ -15,7 +15,6 @@ const app = express();
 const allowedOrigins = [
   'http://localhost:5173',
   process.env.CLIENT_URL,
-  'https://your-frontend.vercel.app' // замените на ваш URL фронтенда
 ].filter(Boolean);
 
 app.use(cors({
@@ -38,11 +37,19 @@ app.use((req, res, next) => {
   next();
 });
 
-// **ВАЖНО: Создаем папку для базы данных, если её нет**
-const dbDir = path.join(__dirname, 'db');
-if (!fs.existsSync(dbDir)) {
-  fs.mkdirSync(dbDir, { recursive: true });
-  console.log('Created db directory:', dbDir);
+// Определяем путь для базы данных в зависимости от окружения
+const isProduction = process.env.NODE_ENV === 'production';
+const dbDir = isProduction ? '/tmp' : path.join(__dirname, 'db');
+
+console.log('Database directory:', dbDir);
+console.log('Is production:', isProduction);
+
+// Для продакшена папка /tmp уже существует, не нужно создавать
+if (!isProduction) {
+  if (!fs.existsSync(dbDir)) {
+    fs.mkdirSync(dbDir, { recursive: true });
+    console.log('Created db directory:', dbDir);
+  }
 }
 
 // Проверка папок для материалов
@@ -66,11 +73,12 @@ app.get('/api/health', (req, res) => {
     status: 'ok',
     timestamp: new Date().toISOString(),
     env: process.env.NODE_ENV,
-    dbPath: dbDir
+    dbPath: dbDir,
+    isProduction
   });
 });
 
-// **ВАЖНО: Обработка ошибок**
+// Обработка ошибок
 app.use((err, req, res, next) => {
   console.error('Error:', err);
   res.status(500).json({ error: err.message });
