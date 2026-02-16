@@ -15,7 +15,7 @@ const app = express();
 const allowedOrigins = [
   'http://localhost:5173',
   process.env.CLIENT_URL,
-
+  'https://your-frontend.vercel.app' // замените на ваш URL фронтенда
 ].filter(Boolean);
 
 app.use(cors({
@@ -38,7 +38,14 @@ app.use((req, res, next) => {
   next();
 });
 
-// Проверка папок
+// **ВАЖНО: Создаем папку для базы данных, если её нет**
+const dbDir = path.join(__dirname, 'db');
+if (!fs.existsSync(dbDir)) {
+  fs.mkdirSync(dbDir, { recursive: true });
+  console.log('Created db directory:', dbDir);
+}
+
+// Проверка папок для материалов
 const materialsDir = path.join(__dirname, 'public', 'materials');
 if (!fs.existsSync(materialsDir)) {
   fs.mkdirSync(materialsDir, { recursive: true });
@@ -58,13 +65,21 @@ app.get('/api/health', (req, res) => {
   res.json({
     status: 'ok',
     timestamp: new Date().toISOString(),
-    env: process.env.NODE_ENV
+    env: process.env.NODE_ENV,
+    dbPath: dbDir
   });
+});
+
+// **ВАЖНО: Обработка ошибок**
+app.use((err, req, res, next) => {
+  console.error('Error:', err);
+  res.status(500).json({ error: err.message });
 });
 
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);
   console.log(`Environment: ${process.env.NODE_ENV}`);
+  console.log(`Database directory: ${dbDir}`);
   console.log(`Materials directory: ${materialsDir}`);
 });
